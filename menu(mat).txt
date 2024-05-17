@@ -1,0 +1,66 @@
+print("Você quer fazer?")
+print("1 soma")
+print("2 subtração")
+print("3 divisão")
+print("4 multiplicação")
+
+if let escolha = readLine(), let opcao = Int(escolha) {
+    var resultado: Double = 0.0
+
+    switch opcao {
+    case 1:
+        print("Qual é o primeiro número?")
+        if let input1 = readLine(), let numero1 = Double(input1) {
+            print("Qual é o segundo número?")
+            if let input2 = readLine(), let numero2 = Double(input2) {
+                resultado = numero1 + numero2
+            } else {
+                print("Número inválido. Tente novamente.")
+            }
+        } else {
+            print("Número inválido. Tente novamente.")
+        }
+    case 2:
+        print("Qual é o primeiro número?")
+        if let input1 = readLine(), let numero1 = Double(input1) {
+            print("Qual é o segundo número?")
+            if let input2 = readLine(), let numero2 = Double(input2) {
+                resultado = numero1 - numero2
+            } else {
+                print("Número inválido. Tente novamente.")
+            }
+        } else {
+            print("Número inválido. Tente novamente.")
+        }
+    case 3:
+        print("Qual é o primeiro número?")
+        if let input1 = readLine(), let numero1 = Double(input1) {
+            print("Qual é o segundo número?")
+            if let input2 = readLine(), let numero2 = Double(input2), numero2 != 0 {
+                resultado = numero1 / numero2
+            } else {
+                print("Número inválido ou divisão por zero. Tente novamente.")
+            }
+        } else {
+            print("Número inválido. Tente novamente.")
+        }
+    case 4:
+        print("Qual é o primeiro número?")
+        if let input1 = readLine(), let numero1 = Double(input1) {
+            print("Qual é o segundo número?")
+            if let input2 = readLine(), let numero2 = Double(input2) {
+                resultado = numero1 * numero2
+            } else {
+                print("Número inválido. Tente novamente.")
+            }
+        } else {
+            print("Número inválido. Tente novamente.")
+        }
+    default:
+        print("Opção inválida.")
+    }
+    
+    print("O resultado é: \(resultado)")
+} else {
+    print("Opção inválida. Escolha um número de 1 a 4.")
+}
